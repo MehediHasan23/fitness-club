@@ -1,0 +1,56 @@
+ [
+  {
+    "id": 1,
+    "name": "Yoga",
+    "Trainer": "Ryan Knight",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-1.jpg.webp",
+    "price": "200",
+    "rating": "4.5",
+    "desc": "Yoga is a mind and body practice. Various styles of yoga combine physical postures, breathing techniques, and meditation or relaxation."
+  },
+  {
+    "id": 2,
+    "name": "Weight Loss",
+    "Trainer": "Ryan Scott",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-6.jpg.webp",
+    "price": "120",
+    "rating": "3.9",
+    "desc": "Weight loss can have causes that are not due to underlying disease."
+  },
+  {
+    "id": 3,
+    "name": "Crossfit",
+    "Trainer": "Chester Bowen",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-8.jpg.webp",
+    "price": "220",
+    "rating": "4.2",
+    "desc": "CrossFit is a branded fitness regimen created by Greg Glassman.."
+  },
+  {
+    "id": 4,
+    "name": "Karate",
+    "Trainer": "Kevin McCormick",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-4.jpg.webp",
+    "price": "250",
+    "rating": "4.8",
+    "desc": "Karate is a martial art developed in the Ryukyu Kingdom."
+  },
+  {
+    "id": 5,
+    "name": "Running",
+    "Trainer": "Randy Rivera",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-2.jpg.webp",
+    "price": "170",
+    "rating": "4.2",
+    "desc": "Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot."
+  },
+  {
+    "id": 6,
+    "name": "Personal Training",
+    "Trainer": "Cole Robertson",
+    "img": "https://preview.colorlib.com/theme/gutim/img/classes/classes-3.jpg.webp",
+    "price": "370",
+    "rating": "4.8",
+    "desc": "Personal trainers work with clients to develop and implement fitness training regimens that help achieve goals"
+  }
+]

@@ -1,0 +1,8 @@
+.training-container{
+  background-image: url(../../images/training/banner-bg.jpg.webp);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

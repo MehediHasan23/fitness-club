@@ -13,6 +13,8 @@ import Details from './Pages/Details/Details';
 import AuthProvider from './context/AuthProvider';
 import Membership from './Pages/Membership/Membership';
 import Login from './Pages/Login/Login/Login';
+import SignUp from './Pages/Login/SignUp/SignUp';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -30,11 +32,14 @@ function App() {
           <Route exact path ='/membership'>
           <Membership></Membership>
           </Route>
-          <Route exact path ='/details/:detailId'>
+          <PrivateRoute exact path ='/details/:detailId'>
           <Details></Details>
-          </Route>
+          </PrivateRoute>
           <Route exact path ='/login'>
           <Login></Login>
+          </Route>
+          <Route exact path ='/signup'>
+          <SignUp></SignUp>
           </Route>
           <Route  path ='*'>
             <Error></Error>

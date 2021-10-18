@@ -3,33 +3,63 @@ import firebaseInitialize from './../Pages/Login/Firebase/firebase.init'
 import { 
   getAuth, 
   signInWithPopup, 
+  GithubAuthProvider,
   GoogleAuthProvider, 
   signOut,
-  onAuthStateChanged 
+  onAuthStateChanged ,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  
 } 
 from "firebase/auth";
 
 firebaseInitialize();
 const googleProvider = new GoogleAuthProvider();
+const gitHubProvider = new GithubAuthProvider();
 
 const auth = getAuth();
 
 const useFirebase =()=>{
   const [user, setUser] = useState({})
   const [error, setError] = useState('')
-  //google sign in
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+console.log(user);
+  //google
   const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-      })
-      .catch((err) => {
-        const errorMessage = err.message;
-        setError(errorMessage);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
+   //github
+   const signInWithGithub = () => {
+    return signInWithPopup(auth, gitHubProvider);
+  };
+
+  //login with Email And Password
+  const signInWithEmail = (e) => {
+    e.preventDefault();
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  // register with email & pass
+  const signUpWithEmail = () => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //name
+  const getName = (e) => {
+    setName(e?.target?.value);
+  };
+  //email
+  const getEmail = (e) => {
+    setEmail(e?.target?.value);
+  };
+  //password
+  const getPassword = (e) => {
+    setPassword(e?.target?.value);
+  };
+  
  
 
   // sign out
@@ -44,7 +74,7 @@ const useFirebase =()=>{
   };
 
 
-  // get currently signed in user
+  // user login state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -56,8 +86,17 @@ const useFirebase =()=>{
 
   return{
     signInWithGoogle,
+    signInWithGithub,
+    signInWithEmail,
+    signUpWithEmail,
+    getName,
+    getEmail,
+    getPassword,
     user,
+    name,
     error,
+    setError,
+    setUser,
     logOut
   }
 

@@ -4,11 +4,13 @@ Description: Take free online healthcare courses and explore a career in healthc
 
 #
 
-Live Site Link: .
+Live Site Link: https://fitnessclub-74b45.web.app/.
 
-Technology we use to build this project:
+About this this project:
 
-- JSX
-- NODE.js
-- React.js
-- Bootstrap
+- provide good service
+- dedicated instructor
+- good equipment
+- Balance diet-chart
+- Information about all gymnistisc service
+

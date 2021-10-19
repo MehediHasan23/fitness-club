@@ -1,12 +1,19 @@
+import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import useProvContext from '../../hooks/useProvContext';
+
 
 
 import Service from '../Service/Service';
 import './Services.css'
 
 const Services = () => {
-  const {services} = useProvContext()
+  // const {services} = useProvContext()
+  const [services, setServices] = useState([])
+  useEffect(()=>{
+    fetch('./data.json')
+    .then(res=>res.json())
+    .then(data =>setServices(data))
+  },[])
 
 
   return (

@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import {Card, Button, Container} from 'react-bootstrap'
-import useProvContext from '../../hooks/useProvContext';
 import { Link } from 'react-router-dom';
 import './Details.css'
 
 
 const Details = () => {
   const {detailId} = useParams();
- const {services} = useProvContext()
+  const [services, setServices] = useState([])
+  useEffect(()=>{
+    fetch('https://raw.githubusercontent.com/MehediHasan23/fake-data/main/data.json')
+    .then(res=>res.json())
+    .then(data =>setServices(data))
+  },[])
  const selectItem = services?.find(service => service.id === Number(detailId))
   console.log(services);
   return (

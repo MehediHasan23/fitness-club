@@ -25,7 +25,19 @@ const Login = () => {
       <p className="text-danger text-center">{error}</p>
       <div className="form-container mx-auto">
       <Form
-          onSubmit={loginProcess}
+          onSubmit={(e)=>{
+            e.preventDefault();
+            loginProcess()
+            .then(result=>{
+              const user = result.user
+              setUser(user);
+              setError('');
+              history.push(redirect)
+            })
+            .catch(error=>{
+              setError(error.message)
+            })
+          }}
         >
           <Row>
             <Col className="text-start">

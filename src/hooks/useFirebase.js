@@ -42,17 +42,10 @@ const useFirebase =()=>{
   };
 
   //login with Email And Password
-  const loginProcess = e =>{ 
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-     .then(result=>{
-      const user = result.user
-      console.log(user);
-      setError('');
-    })
-    .catch(error=>{
-      setError(error.message)
-    })
+  const loginProcess = () =>{ 
+   
+    return signInWithEmailAndPassword(auth, email, password)
+    
     
   }
 

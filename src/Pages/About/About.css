@@ -1,0 +1,8 @@
+.about-container{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.about-container h3{
+  color: tomato;
+  text-transform: uppercase;
+}

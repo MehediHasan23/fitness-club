@@ -9,6 +9,8 @@ import {
   onAuthStateChanged ,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
+  
   
 } 
 from "firebase/auth";
@@ -37,28 +39,58 @@ console.log(user);
   };
 
   //login with Email And Password
-  const signInWithEmail = (e) => {
+  const loginProcess = e =>{
     e.preventDefault();
-    return signInWithEmailAndPassword(auth, email, password);
-  };
+    signInWithEmailAndPassword(auth, email, password)
+     .then(result=>{
+      const user = result.user
+      console.log(user);
+      setError('');
+    }).catch(error=>{
+      setError(error.message)
+    })
+    
+  }
 
   // register with email & pass
-  const signUpWithEmail = () => {
-    return createUserWithEmailAndPassword(auth, email, password);
-  };
+  const registerProcess = e =>{
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+    .then(result =>{
+      const user =result.user
+      console.log(user);
+      setError('')
+      setUserName();
+    }).catch(error=>{
+      setError(error.message)
+    })
+  }
+
+  //set user name
+  const setUserName =()=>{
+    updateProfile(auth.currentUser,{
+      displayName : name
+    }).then(result=>{})
+  }
 
   //name
-  const getName = (e) => {
-    setName(e?.target?.value);
-  };
+  const handleName = e=>{
+    setName(e.target.value);
+    
+  }
   //email
-  const getEmail = (e) => {
-    setEmail(e?.target?.value);
-  };
+  const handelEmail =e=>{
+    setEmail(e.target.value);
+    
+   }
   //password
-  const getPassword = (e) => {
-    setPassword(e?.target?.value);
-  };
+  const handelPass =e=>{
+    setPassword(e.target.value);
+  }
+
+ 
+
+ 
   
  
 
@@ -87,17 +119,18 @@ console.log(user);
   return{
     signInWithGoogle,
     signInWithGithub,
-    signInWithEmail,
-    signUpWithEmail,
-    getName,
-    getEmail,
-    getPassword,
+    loginProcess,
+    registerProcess,
+    handleName,
+    handelEmail,
+    handelPass,
     user,
     name,
     error,
     setError,
     setUser,
-    logOut
+    logOut,
+    
   }
 
 }

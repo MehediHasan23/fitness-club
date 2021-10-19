@@ -10,22 +10,22 @@ const Menubar = () => {
   const { displayName, photoURL, email } = user;
   return (
     <div>
-      <Navbar  bg="dark" expand="lg">
+      <Navbar  className='menu-container'  bg="dark" expand="lg">
   <Container>
-    <Navbar.Brand as={NavLink} className="text-white" to="/home"><img src={navLogo} alt="" /></Navbar.Brand>
+    <Navbar.Brand to="/home" as={NavLink} className="text-white"><img src={navLogo} alt="" /></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto ">
-      <Nav.Link as={NavLink} to="/home" className="text-white">Home</Nav.Link>
-      <Nav.Link as={NavLink} to="/about" className="text-white">About</Nav.Link>
-      <Nav.Link as={NavLink} to="/membership" className="text-white">Membership</Nav.Link>
+      <Nav.Link as={NavLink} to="/home" className="text-white fw-bold fs-6">Home</Nav.Link>
+      <Nav.Link as={NavLink} to="/about" className="text-white fw-bold fs-6">About</Nav.Link>
+      <Nav.Link as={NavLink} to="/membership" className="text-white fw-bold fs-6">Membership</Nav.Link>
       {!email ? (
                 <>
-                  <Nav.Link as={NavLink} to="/signup" className="text-white">
+                  <Nav.Link as={NavLink} to="/signup" className="text-white fw-bold fs-6">
                     Sign Up
                   </Nav.Link>
 
-                  <Nav.Link className="text-white" as={NavLink} to="/login">
+                  <Nav.Link className="text-white fw-bold fs-6" as={NavLink} to="/login">
                     Log in
                   </Nav.Link>
                 </>

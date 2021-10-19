@@ -6,11 +6,11 @@ import useProvContext from '../../../hooks/useProvContext';
 const SignUp = () => {
   const {firebase} = useProvContext();
   const {
-    
-    getName,
-    getEmail,
-    getPassword,
-    signUpWithEmail,
+  
+    handleName,
+    handelPass,
+    handelEmail,
+    registerProcess,
     error
   }= firebase;
   return (
@@ -19,7 +19,7 @@ const SignUp = () => {
       <p className=" mt-2">Sign Up with Email & Password</p>
       <p className="text-danger text-center">{error}</p>
       <div className="w-25 mx-auto">
-        <Form onSubmit={signUpWithEmail}>
+        <Form onSubmit={registerProcess}>
           <Row>
             <Col className="text-start">
               <Form.Label htmlFor="name" visuallyHidden>
@@ -28,7 +28,7 @@ const SignUp = () => {
               <InputGroup className="mb-2">
                 <FormControl
                   required
-                  onBlur={getName}
+                  onBlur={handleName}
                   type="text"
                   autoComplete="current-name"
                   id="name"
@@ -46,7 +46,7 @@ const SignUp = () => {
                 
                 <FormControl
                   required
-                  onBlur={getEmail}
+                  onBlur={handelEmail}
                   type="email"
                   autoComplete="current-email"
                   id="email"
@@ -64,7 +64,7 @@ const SignUp = () => {
                 
                 <FormControl
                   required
-                  onBlur={getPassword}
+                  onBlur={handelPass}
                   type="password"
                   autoComplete="current-password"
                   id="password"
@@ -73,9 +73,9 @@ const SignUp = () => {
               </InputGroup>
             </Col>
           </Row>
-          <button type="submit" className="btn btn-primary mt-2 w-100">
+          <Button type="submit" className="btn btn-primary mt-2 w-100">
             Sign up
-          </button>
+          </Button>
         </Form>
       </div>
       <p className="mt-2">

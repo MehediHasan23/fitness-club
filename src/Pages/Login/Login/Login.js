@@ -8,7 +8,7 @@ import { Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 
 const Login = () => {
   const {firebase} = useProvContext();
-  const {signInWithGoogle,signInWithGithub,signInWithEmail,getEmail,getPassword, user,error,setError, setUser} = firebase;
+  const {signInWithGoogle,signInWithGithub,loginProcess, handelEmail, handelPass, user,error,setError, setUser} = firebase;
   console.log(user);
 
   const history = useHistory();
@@ -26,16 +26,7 @@ const Login = () => {
       <p className="text-danger text-center">{error}</p>
       <div className="w-25 mx-auto">
       <Form
-          onSubmit={() => {
-            signInWithEmail()
-              .then((result) => {
-                setUser(result.user);
-                history.push(redirect);
-              })
-              .catch((err) => {
-                setError(err.message);
-              });
-          }}
+          onSubmit={loginProcess}
         >
           <Row>
             <Col className="text-start">
@@ -45,7 +36,7 @@ const Login = () => {
               <InputGroup className="mb-2">
                 
                 <FormControl
-                  onBlur={getEmail}
+                  onBlur={handelEmail}
                   type="email"
                   autoComplete="current-email"
                   id="email"
@@ -62,7 +53,7 @@ const Login = () => {
               <InputGroup className="mb-2">
                 
                 <FormControl
-                  onBlur={getPassword}
+                  onBlur={handelPass}
                   type="password"
                   autoComplete="current-password"
                   id="password"

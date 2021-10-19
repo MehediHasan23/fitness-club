@@ -15,6 +15,7 @@ import Membership from './Pages/Membership/Membership';
 import Login from './Pages/Login/Login/Login';
 import SignUp from './Pages/Login/SignUp/SignUp';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route exact path ='/home'>
             <Home></Home>
+          </Route>
+          <Route exact path ='/about'>
+            <About></About>
           </Route>
           <Route exact path ='/membership'>
           <Membership></Membership>

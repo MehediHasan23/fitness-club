@@ -10,12 +10,12 @@ const Services = () => {
 
 
   return (
-    <div className='m-0'>
+    <div className='m-0 mt-5'>
       
       <Container>
            
          <div> <h1 className='text-center fw-bold mb-5'><span className='text-danger '>OUR</span> SERVICES</h1></div>
-          <div className='row d-flex justify-content-between '>
+          <div className='row'>
             {
               services.map(service=><Service 
               

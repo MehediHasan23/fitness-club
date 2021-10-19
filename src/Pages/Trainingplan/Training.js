@@ -5,8 +5,8 @@ import './Training.css'
 
 const Training = () => {
   return (
-    <div>
-      <div className="row training-container">
+    <div className='mb-5'>
+      <div className="row training-container m-0 p-0">
         <div className="col-lg-8 col-sm-12 text-center ">
           <div className='mt-5 text-white'>
           <h1>GET TRAINING TODAY</h1>

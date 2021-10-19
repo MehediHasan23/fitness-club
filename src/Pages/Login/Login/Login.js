@@ -17,14 +17,13 @@ const Login = () => {
   return (
     <div className="text-center my-4">
       <h2>Please Login</h2>
-      <p className=" mt-2">Login with Email & Password</p>
       <p className="mt-2">
         <NavLink className="text-decoration-none" to="/signup">
-          Need an Account? Please Sign up!
+          Don't have an account? Sign up!
         </NavLink>
       </p>
       <p className="text-danger text-center">{error}</p>
-      <div className="w-25 mx-auto">
+      <div className="form-container mx-auto">
       <Form
           onSubmit={loginProcess}
         >

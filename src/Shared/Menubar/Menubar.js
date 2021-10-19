@@ -15,18 +15,18 @@ const Menubar = () => {
     <Navbar.Brand to="/home" as={NavLink} className="text-white"><img src={navLogo} alt="" /></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ms-auto ">
-      <Nav.Link as={NavLink} to="/home" className="text-white fw-bold fs-6">Home</Nav.Link>
-      <Nav.Link as={NavLink} to="/about" className="text-white fw-bold fs-6">About</Nav.Link>
-      <Nav.Link as={NavLink} to="/membership" className="text-white fw-bold fs-6">Membership</Nav.Link>
+      <Nav className="ms-auto align-items-center">
+      <Nav.Link as={NavLink} to="/home" className="text-white fw-bold fs-6">HOME</Nav.Link>
+      <Nav.Link as={NavLink} to="/about" className="text-white fw-bold fs-6">ABOUT</Nav.Link>
+      <Nav.Link as={NavLink} to="/membership" className="text-white fw-bold fs-6">MEMBERSHIP</Nav.Link>
       {!email ? (
                 <>
                   <Nav.Link as={NavLink} to="/signup" className="text-white fw-bold fs-6">
-                    Sign Up
+                    SIGN UP
                   </Nav.Link>
 
                   <Nav.Link className="text-white fw-bold fs-6" as={NavLink} to="/login">
-                    Log in
+                    SIGN IN
                   </Nav.Link>
                 </>
               ) : (

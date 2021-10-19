@@ -14,11 +14,8 @@ const Details = () => {
   return (
     <div>
       <Container className ='d-flex flex-wrap justify-content-center align-items-sm-center details'>
-      <div >
-      <>
-        {
-          selectItem?.name && 
-          <div>
+
+      <div>
           <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={selectItem?.img} />
           <Card.Body className='text-center'>
@@ -31,9 +28,14 @@ const Details = () => {
           </Card.Body>
           </Card>
           </div>
+      {/* <div >
+      <>
+        {
+          selectItem?.email && 
+         
         }
       </>
-      </div>
+      </div> */}
     </Container>
     </div>
   );

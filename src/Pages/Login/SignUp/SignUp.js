@@ -1,4 +1,5 @@
 import React from 'react';
+import './SignUp.css'
 import { Button, Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useProvContext from '../../../hooks/useProvContext';
@@ -15,10 +16,14 @@ const SignUp = () => {
   }= firebase;
   return (
     <div className="text-center my-4">
-      <h2>Please Sign Up</h2>
-      <p className=" mt-2">Sign Up with Email & Password</p>
+      <h2>SIGN UP</h2>
+      <p className="mt-2">
+        <NavLink className="text-decoration-none" to="/login">
+          Already have an account? Please login!
+        </NavLink>
+      </p>
       <p className="text-danger text-center">{error}</p>
-      <div className="w-25 mx-auto">
+      <div className="form-container mx-auto">
         <Form onSubmit={registerProcess}>
           <Row>
             <Col className="text-start">
@@ -78,11 +83,7 @@ const SignUp = () => {
           </Button>
         </Form>
       </div>
-      <p className="mt-2">
-        <NavLink className="text-decoration-none" to="/login">
-          Already have an account? Please login!
-        </NavLink>
-      </p>
+      
     </div>
   );
 };

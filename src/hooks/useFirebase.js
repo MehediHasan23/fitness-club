@@ -27,26 +27,30 @@ const useFirebase =()=>{
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-console.log(user);
+  const [loading, setLoading] = useState(true);
+// console.log(user);
   //google
   const signInWithGoogle = () => {
+   
     return signInWithPopup(auth, googleProvider);
   };
 
    //github
    const signInWithGithub = () => {
+     
     return signInWithPopup(auth, gitHubProvider);
   };
 
   //login with Email And Password
-  const loginProcess = e =>{
+  const loginProcess = e =>{ 
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
      .then(result=>{
       const user = result.user
       console.log(user);
       setError('');
-    }).catch(error=>{
+    })
+    .catch(error=>{
       setError(error.message)
     })
     
@@ -88,33 +92,34 @@ console.log(user);
     setPassword(e.target.value);
   }
 
- 
-
- 
-  
- 
 
   // sign out
   const logOut = () => {
+    
     signOut(auth)
       .then((result) => {
         setUser({});
+
       })
       .catch((err) => {
         setError(err.message);
       });
+      
   };
 
 
   // user login state
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
+    const unsubscribe = onAuthStateChanged(auth, (signedInUser) => {
+      if (signedInUser) {
+        setUser(signedInUser);
+      } else {
+        setUser({});
       }
+      setLoading(false);
     });
     return () => unsubscribe;
-  }, [user]);
+  }, []);
 
   return{
     signInWithGoogle,
@@ -130,6 +135,7 @@ console.log(user);
     setError,
     setUser,
     logOut,
+    loading
     
   }
 

@@ -13,4 +13,5 @@ About this this project:
 - good equipment
 - Balance diet-chart
 - Information about all gymnistisc service
+- get a better result 
 

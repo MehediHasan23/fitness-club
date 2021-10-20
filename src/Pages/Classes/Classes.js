@@ -16,7 +16,7 @@ const Classes = () => {
       <div className='container mt-5 bg-light'>
         
         <div className="row p-2">
-        <h1 className='text-center mb-5'><span className='text-danger'>OUR</span> CLASSES</h1>
+        <h1 className='text-center mb-5 fw-bold'><span className='text-danger'>OUR</span> CLASSES</h1>
         <div className="col-sm-12 col-md-6 col-lg-3 text-center bg-white p-2">
         <h3>Aerobic fitness</h3>
           <p> Aerobic activities condition your heart and lungs. Aerobic means "with oxygen." The purpose of aerobic conditioning is to increase the amount of oxygen that is delivered to your muscles, which allows them to work longer. </p>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Card, Col, Form, Row , Button} from 'react-bootstrap';
+import Slide from 'react-reveal/Slide'
+import Zoom from 'react-reveal/Zoom';
+
 import trainer from './../../images/trainer.png'
 import faq from './../../images/faw.png'
 
@@ -8,9 +11,11 @@ const Membership = () => {
     <div>
       <div className="container purchase-container mt-5">
         <h1 className='text-center fw-bold mb-5' style={{color:'tomato'}}>PURCHASE A PLAN</h1>
+        
       <div className="row align-items-center">
-      <div className='text-center col-sm-12 col-md-6 col-lg-4'>
-        <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
+      <Zoom>
+        <div className='text-center col-sm-12 col-md-12 col-lg-4'>
+          <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >BASIC</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$17</span><span className='fs-6 text-muted'>/01 mo</span></h2>
@@ -25,9 +30,11 @@ const Membership = () => {
           <button className='btn btn-outline-danger'>START NOW</button>
           </Card.Body>
           </Card>
-      </div> 
-      <div className='text-center col-sm-12 col-md-6 col-lg-4 '>
-          <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
+        </div> 
+      </Zoom> 
+      <Zoom>
+      <div className='text-center col-sm-12 col-md-12 col-lg-4 '>
+          <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >STANDARD</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$37</span><span className='fs-6 text-muted'>/01 mo</span></h2>
@@ -42,9 +49,11 @@ const Membership = () => {
           <button className='btn btn-outline-danger'>START NOW</button>
           </Card.Body>
           </Card>
-      </div> 
-      <div className='text-center col-sm-12 col-md-6 col-lg-4 '>
-        <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
+        </div> 
+        </Zoom>
+      <Zoom>
+        <div className='text-center col-sm-12 col-md-12 col-lg-4 '>
+        <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >PREMIUM</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$377</span><span className='fs-6 text-muted'>/01 mo</span></h2>
@@ -58,12 +67,14 @@ const Membership = () => {
           <p className='fw-bold'>Unlimited</p>
           <button className='btn btn-outline-danger'>START NOW</button>
           </Card.Body>
-          </Card>
-      </div> 
+          </Card> 
+        </div> 
+       </Zoom>
       {/* register now section  */}
       <div className="container register-section mt-5">
         
         <div className="row mt-5">
+        <Slide left>
           <div className="col-lg-8 mt-5">
             <h1 className='register text-center '  style={{color:'tomato'}}>REGISTER NOW</h1>
             <p className='text-center'>The First 7 Day Trial Is Completely Free With The Teacher</p>
@@ -119,9 +130,13 @@ const Membership = () => {
                 </Button>
               </Form>
           </div>
+          </Slide>
+          <Slide right>
+
           <div className="col-lg-4 my-5">
             <img className='img-fluid' src={trainer} alt="" />
           </div>
+          </Slide>
         </div>
       </div>
           
@@ -131,7 +146,8 @@ const Membership = () => {
       <div className="container mt-5 mb-5">
           <div className="row">
           <h1 className='text-center fw-bold my-5' style={{color:'tomato'}} >FAQ</h1>
-            <div className="col-lg-6">
+      <Slide top>   
+        <div className="col-lg-6">
             
         <div className="accordion accordion-flush" id="accordionFlushExample">
         <div className="accordion-item">
@@ -168,11 +184,14 @@ const Membership = () => {
         </div>
       </div>
     </div>
-
+    </Slide>
+    
             {/* img section  */}
+            <Slide bottom>
             <div className="col-lg-6">
                 <img className='img-fluid' src={faq} alt="" />
             </div>
+            </Slide>
           </div>
       </div>
     </div>

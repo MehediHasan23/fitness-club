@@ -1,29 +1,32 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
-import { Card } from 'react-bootstrap';
+
 import './Service.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons'
+import {faUser } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
 
 
 const Service = (props) => {
   const {name, img, Trainer, id,  price} = props.service
   // console.log(props);
   return (
-    <div className='col-sm-12 col-md-6 col-lg-4'>
+    <Zoom>
+      <div className='col-sm-12 col-md-6 col-lg-4'>
     
       <div  className="card mx-auto className='mb-0' border m-2" style={{width: "18rem"}}>
       <img src={img} className="card-img-top" alt="..."/>
-        <div className="card-body text-center m-0">
+      <div className="card-body text-center m-0">
         <h5 className="card-title">{name}</h5>
         <p className='mb-0'><span className='text-warning'><FontAwesomeIcon icon={faUser} /> </span> Trainer:{Trainer}</p>
         <p className='mb-0'>Price: {price} $</p>
         <Link to={`/details/${id}`}><Button className='btn btn-primary w-100'>View Details</Button></Link>
-    </div>
-</div>
+      </div>
+   </div>
   
     </div>
+    </Zoom>
   );
 };
 

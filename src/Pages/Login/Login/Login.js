@@ -1,4 +1,5 @@
 import React from 'react';
+import Shake from 'react-reveal/Shake';
 import { NavLink , useHistory, useLocation} from 'react-router-dom';
 import useProvContext from '../../../hooks/useProvContext';
 import './Login.css'
@@ -15,16 +16,19 @@ const Login = () => {
   const location = useLocation();
   const redirect = location?.state?.from || "/home";
   return (
+    <Shake>
     <div className="text-center my-4">
-      <h2>Please Login</h2>
+     <h2>Please Login</h2>
       <p className="mt-2">
         <NavLink className="text-decoration-none" to="/signup">
           Don't have an account? Sign up!
         </NavLink>
       </p>
       <p className="text-danger text-center">{error}</p>
+      
       <div className="form-container mx-auto">
-      <Form
+      
+        <Form
           onSubmit={(e)=>{
             e.preventDefault();
             loginProcess()
@@ -78,8 +82,10 @@ const Login = () => {
             Login
           </button>
         </Form>
+
       </div>
       
+
       <p className="mt-3">Or</p>
       <p> Login with</p>
       <div>
@@ -116,7 +122,9 @@ const Login = () => {
         </button>
       </div>
     </div>
+    </Shake>
     );
+    
 };
 
 export default Login;

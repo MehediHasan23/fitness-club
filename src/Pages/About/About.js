@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css'
+import Slide from 'react-reveal/Slide'
 import pic1 from '../../images/about/about1.png'
 import pic2 from '../../images/about/about2.jpg'
 import pic3 from '../../images/about/about3.jpg'
@@ -9,6 +10,7 @@ const About = () => {
   return (
     <div className='container about-container'>
       <div className="row">
+      <Slide left cascade>
         <div className="col-sm-12 col-lg-8">
           <div>
           <h3>About Us</h3>
@@ -49,13 +51,29 @@ const About = () => {
             </p>
           </div>
         </div>
+        </Slide>
+      
+
         <div className="col-sm-12 col-lg-4">
-          <div><img className='img-fluid my-1' src={pic1} alt="" /></div>
-          <div><img className='img-fluid my-1' src={pic2} alt="" /></div>
-          <div><img className='img-fluid my-1' src={pic3} alt="" /></div>
-          <div><img className='img-fluid my-1' src={pic4} alt="" /></div>
-        </div>
+        <Slide right cascade>
+        <div>
+           <div>
+              <img className='img-fluid my-1' src={pic1} alt="" />
+              </div>
+            <div>
+              <img className='img-fluid my-1' src={pic2} alt="" /></div>
+            <div>
+              <img className='img-fluid my-1' src={pic3} alt="" /></div>
+            <div>
+              <img className='img-fluid my-1' src={pic4} alt="" /></div>
+          </div>
+          </Slide>
+           </div>
+          
+        
+        
       </div>
+      
     </div>
  
   

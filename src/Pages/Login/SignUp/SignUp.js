@@ -3,6 +3,7 @@ import './SignUp.css'
 import { Button, Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useProvContext from '../../../hooks/useProvContext';
+import Rotate from 'react-reveal/Rotate';
 
 const SignUp = () => {
   const {firebase} = useProvContext();
@@ -15,6 +16,8 @@ const SignUp = () => {
     error
   }= firebase;
   return (
+    <Rotate top left>
+
     <div className="text-center my-4">
       <h2>SIGN UP</h2>
       <p className="mt-2">
@@ -85,6 +88,8 @@ const SignUp = () => {
       </div>
       
     </div>
+  </Rotate>
+
   );
 };
 

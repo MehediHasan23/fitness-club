@@ -16,7 +16,9 @@ import {
 const Experts = () => {
   return (
     <Container className='experts-container'>
-      <h1 className='text-center fw-bold mb-5'><span className='text-danger '>OUR</span> EXPERTS</h1>
+      <h1 className='text-center fw-bold mb-5'><span 
+      className='text-danger '>OUR</span> EXPERTS</h1>
+
       <div >
       <CardGroup className='text-center'>
   <Card className='m-1'>
@@ -99,6 +101,7 @@ const Experts = () => {
   </Card>
 </CardGroup>
     </div>
+    
     </Container>
   );
 };

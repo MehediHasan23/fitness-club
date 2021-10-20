@@ -18,6 +18,7 @@ const Menubar = () => {
       <Nav className="ms-auto align-items-center">
       <Nav.Link as={NavLink} to="/home" className="text-white fw-bold fs-6">HOME</Nav.Link>
       <Nav.Link as={NavLink} to="/about" className="text-white fw-bold fs-6">ABOUT</Nav.Link>
+      <Nav.Link as={NavLink} to="/class" className="text-white fw-bold fs-6">CLASS</Nav.Link>
       <Nav.Link as={NavLink} to="/membership" className="text-white fw-bold fs-6">MEMBERSHIP</Nav.Link>
       {!email ? (
                 <>

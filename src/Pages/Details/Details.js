@@ -18,7 +18,6 @@ const Details = () => {
   return (
     <div>
       <Container className ='d-flex flex-wrap justify-content-center align-items-sm-center details'>
-
       <div>
           <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={selectItem?.img} />
@@ -32,14 +31,6 @@ const Details = () => {
           </Card.Body>
           </Card>
           </div>
-      {/* <div >
-      <>
-        {
-          selectItem?.email && 
-         
-        }
-      </>
-      </div> */}
     </Container>
     </div>
   );

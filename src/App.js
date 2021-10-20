@@ -16,6 +16,7 @@ import Login from './Pages/Login/Login/Login';
 import SignUp from './Pages/Login/SignUp/SignUp';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import About from './Pages/About/About';
+import Classes from './Pages/Classes/Classes';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           <Route exact path ='/about'>
             <About></About>
           </Route>
+          <PrivateRoute exact path ='/class'>
+            <Classes></Classes>
+          </PrivateRoute>
           <PrivateRoute exact path ='/membership'>
           <Membership></Membership>
           </PrivateRoute>

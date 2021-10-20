@@ -6,11 +6,11 @@ import faq from './../../images/faw.png'
 const Membership = () => {
   return (
     <div>
-      <div className="container purchase-container my-5">
-        <h1 className='text-center fw-bold my-5' style={{color:'tomato'}}>PURCHASE A PLAN</h1>
-      <div className="row ">
-      <div className='col-sm-12 col-md-6 col-lg-4 text-center'>
-        <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
+      <div className="container purchase-container mt-5">
+        <h1 className='text-center fw-bold mb-5' style={{color:'tomato'}}>PURCHASE A PLAN</h1>
+      <div className="row align-items-center">
+      <div className='text-center col-sm-12 col-md-6 col-lg-4'>
+        <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >BASIC</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$17</span><span className='fs-6 text-muted'>/01 mo</span></h2>
@@ -26,8 +26,8 @@ const Membership = () => {
           </Card.Body>
           </Card>
       </div> 
-      <div className='col-sm-12 col-md-6 col-lg-4 text-center'>
-          <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
+      <div className='text-center col-sm-12 col-md-6 col-lg-4 '>
+          <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >STANDARD</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$37</span><span className='fs-6 text-muted'>/01 mo</span></h2>
@@ -43,8 +43,8 @@ const Membership = () => {
           </Card.Body>
           </Card>
       </div> 
-      <div className='col-sm-12 col-md-6 col-lg-4 text-center'>
-        <Card className='text-center my-2' border="danger" style={{ width: '18rem' }}>
+      <div className='text-center col-sm-12 col-md-6 col-lg-4 '>
+        <Card className='text-center my-2' border="danger" style={{ width: '19rem' }}>
           <Card.Header className='text-white fw-bold' style={{background:'tomato'}} >PREMIUM</Card.Header>
           <Card.Body>
           <h2 ><span className='fs-1' style={{color:'tomato'}}>$377</span><span className='fs-6 text-muted'>/01 mo</span></h2>
